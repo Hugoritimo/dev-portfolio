@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import FaultyTerminal from './components/FaultyTerminal';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
+<div style={{ width: '100%', height: '600px', position: 'relative' }}>
+  <FaultyTerminal
+    scale={1.5}
+    gridMul={[2, 1]}
+    digitSize={1.2}
+    timeScale={1}
+    pause={false}
+    scanlineIntensity={1}
+    glitchAmount={1}
+    flickerAmount={1}
+    noiseAmp={1}
+    chromaticAberration={0}
+    dither={0}
+    curvature={0}
+    tint="#ffffff"
+    mouseReact={true}
+    mouseStrength={0.5}
+    pageLoadAnimation={false}
+    brightness={1}
+  />
+</div>
 export default App
